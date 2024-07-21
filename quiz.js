@@ -196,8 +196,24 @@ function showAnswer() {
   `;
 }
 
+document.querySelector("#login-button").addEventListener("click", function () {
+  document.querySelector(".login").style.display = "none";
+});
+
 submit.addEventListener("click", checkAnswer);
 reset.addEventListener("click", retryQuiz);
 showAnswerButton.addEventListener("click", showAnswer);
+
+const login=document.querySelector("#login-button");
+const fullName=document.querySelector("#full-name");
+const email=document.querySelector("#email");
+
+login.addEventListener("click",function(){
+  const mail=email.value;
+  const name=fullName.value;
+  console.log(`Your full name is ${name} having email id ${mail}`);
+  document.querySelector(".login").style.display="none";
+  document.querySelector(".blur-body").style.display="contents";
+})
 
 displayQuestion();
