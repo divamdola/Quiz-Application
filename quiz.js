@@ -214,6 +214,7 @@ login.addEventListener("click",function(){
   console.log(`Your full name is ${name} having email id ${mail}`);
   document.querySelector(".login").style.display="none";
   document.querySelector(".blur-body").style.display="contents";
+  document.querySelector(".username").innerHTML=`Welcome<br>${name}`;
 })
 
 displayQuestion();
